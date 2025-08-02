@@ -1,4 +1,4 @@
-name: Run Colab Notebook CI
+name: Run Notebooks
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  execute-notebook:
+  execute-notebooks:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install notebook nbconvert ipykernel
 
-    - name: Run notebook
+    - name: Execute demo.ipynb
       run: |
-        jupyter nbconvert --to notebook --execute notebooks/demo.ipynb --output notebooks/demo_executed.ipynb
+        jupyter nbconvert --to notebook --execute demo.ipynb --output executed_demo.ipynb
+
+    - name: Execute Welcome_To_Colab.ipynb
+      run: |
+        jupyter nbconvert --to notebook --execute "Welcome_To_Colab.ipynb" --output "executed_Welcome_To_Colab.ipynb"
