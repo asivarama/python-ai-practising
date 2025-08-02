@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyMRfjl4lNJKavklbCjRKTrO",
+      "authorship_tag": "ABX9TyOtOusN549bo2qnJ/rKWoAp",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -54,7 +54,6 @@
     {
       "cell_type": "markdown",
       "source": [
-        "requirements.txt\n",
         "notebook\n",
         "nbconvert\n",
         "ipykernel\n"
